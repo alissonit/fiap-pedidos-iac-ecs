@@ -27,7 +27,6 @@ variable "db_name" {
 
 variable "rds_password" {
   description = "RDS password"
-  default     = "fiap1234"
   sensitive   = true
 }
 
@@ -63,6 +62,5 @@ variable "parameter_group_name" {
 }
 
 variable "ecs_namespace" {
-  default     = "arn:aws:servicediscovery:sa-east-1:346337500368:namespace/ns-z3deezemsf2xlyvr"
   description = "ECS Namespace"
 }
