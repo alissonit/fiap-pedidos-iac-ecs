@@ -1,8 +1,8 @@
 terraform {
   backend "s3" {
-    bucket = "management-state-tf"
-    key    = "ecs/terraform.tfstate"
-    region = "sa-east-1"
+    bucket  = "management-state-tf"
+    key     = "ecs/terraform.tfstate"
+    region  = "sa-east-1"
     profile = "fiap-env"
   }
   required_providers {
