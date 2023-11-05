@@ -32,6 +32,7 @@ jobs:
         sso_role_name = SysOps
         region = sa-east-1
         output = json" > ~/.aws/config
+        cat ~/.aws/config
 
     - name: AWS login SSO
       run: |
