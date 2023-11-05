@@ -26,7 +26,7 @@ jobs:
       run: |
         mkdir -p ~/.aws
         echo "[profile 05-sandbox]
-        sso_start_url = ${{ env.SSO_START_URL }}
+        sso_start_url = ${{ vars.SSO_START_URL }}
         sso_region = sa-east-1
         sso_account_id = ${{ secrets.ACCOUNT_ID }}
         sso_role_name = SysOps
