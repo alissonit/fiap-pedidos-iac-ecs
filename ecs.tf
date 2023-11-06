@@ -74,6 +74,10 @@ resource "aws_ecs_task_definition" "fiap_pedidos" {
       ],
       environment = [
         {
+          name  = "MYSQL_HOST"
+          value = "${var.rds_host}"
+        },
+        {
           name  = "MYSQL_USERNAME"
           value = "${var.rds_username}"
         },
