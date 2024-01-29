@@ -135,4 +135,3 @@ resource "aws_ecs_service" "name" {
   depends_on = [aws_lb.fiap_pedidos]
 
 }
-
