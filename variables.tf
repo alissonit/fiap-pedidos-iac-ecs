@@ -67,4 +67,5 @@ variable "parameter_group_name" {
 
 variable "ecs_namespace" {
   description = "ECS Namespace"
+  default = "fiap-pedidos"
 }

@@ -14,11 +14,6 @@ resource "aws_ecs_cluster" "fiap_pedidos" {
       logging = "DEFAULT"
     }
   }
-
-  service_connect_defaults {
-    namespace = var.ecs_namespace
-  }
-
 }
 
 
