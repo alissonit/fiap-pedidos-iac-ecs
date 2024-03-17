@@ -32,3 +32,8 @@ data "aws_subnet" "clusterc" {
 data "aws_iam_role" "name" {
   name = "ecsTaskExecutionRole"
 }
+
+
+data "aws_db_instance" "database" {
+  db_instance_identifier = "db-fiap-pedidos"
+}

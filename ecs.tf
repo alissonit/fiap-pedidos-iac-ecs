@@ -14,9 +14,9 @@ resource "aws_ecs_cluster" "fiap_pedidos" {
       logging = "DEFAULT"
     }
   }
-  service_connect_defaults {
-    namespace = var.ecs_namespace
-  }
+  //service_connect_defaults {
+  //  namespace = var.ecs_namespace
+  //}
 }
 
 
@@ -73,7 +73,7 @@ resource "aws_ecs_task_definition" "fiap_pedidos" {
       environment = [
         {
           name  = "MYSQL_HOST"
-          value = "${var.rds_host}"
+          value = "${data.aws_db_instance.database.endpoint}"
         },
         {
           name  = "MYSQL_USERNAME"

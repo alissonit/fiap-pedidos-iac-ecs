@@ -25,9 +25,9 @@ variable "db_name" {
 
 }
 
-variable "rds_host" {
-  description = "RDS host"
-}
+//variable "rds_host" {
+//  description = "RDS host"
+//}
 
 variable "rds_password" {
   description = "RDS password"
