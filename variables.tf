@@ -25,9 +25,9 @@ variable "db_name" {
 
 }
 
-variable "rds_host" {
-  description = "RDS host"
-}
+//variable "rds_host" {
+//  description = "RDS host"
+//}
 
 variable "rds_password" {
   description = "RDS password"
@@ -67,4 +67,5 @@ variable "parameter_group_name" {
 
 variable "ecs_namespace" {
   description = "ECS Namespace"
+  default = "fiap-pedidos"
 }
