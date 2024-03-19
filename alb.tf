@@ -35,7 +35,7 @@ resource "aws_lb_target_group" "fiap_pedidos" {
     path                = "/api/v1/health-check"
     port                = 8080
     protocol            = "HTTP"
-    matcher             = "200-399"
+    matcher             = "200-499"
     interval            = 30
     timeout             = 5
     healthy_threshold   = 3

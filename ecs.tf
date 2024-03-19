@@ -73,7 +73,7 @@ resource "aws_ecs_task_definition" "fiap_pedidos" {
       environment = [
         {
           name  = "MYSQL_HOST"
-          value = "${data.aws_db_instance.database.endpoint}"
+          value = "jdbc:mysql://${data.aws_db_instance.database.endpoint}/db-pedidos?createDatabaseIfNotExist=true"
         },
         {
           name  = "MYSQL_USERNAME"
@@ -118,7 +118,7 @@ resource "aws_ecs_service" "name" {
   network_configuration {
     subnets          = [data.aws_subnet.clustera.id, data.aws_subnet.clusterb.id]
     security_groups  = [aws_security_group.cluster.id]
-    assign_public_ip = false
+    assign_public_ip = true
   }
 
   load_balancer {
